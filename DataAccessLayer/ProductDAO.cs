@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace DataAccessLayer
 {
     public class ProductDAO
@@ -20,7 +19,7 @@ namespace DataAccessLayer
             // Additional products commented out
         }
 
-        public List<Product> GetProducts()
+        public static List<Product> GetProducts()
         {
             return listProducts;
         }
@@ -45,7 +44,7 @@ namespace DataAccessLayer
             listProducts.Add(p);
         }
 
-        public void UpdateProduct(Product product)
+        public static void UpdateProduct(Product product)
         {
             foreach (Product p in listProducts.ToList())
             {
@@ -60,7 +59,7 @@ namespace DataAccessLayer
             }
         }
 
-        public void DeleteProduct(Product product)
+        public static void DeleteProduct(Product product)
         {
             foreach (Product p in listProducts.ToList())
             {
@@ -71,7 +70,7 @@ namespace DataAccessLayer
             }
         }
 
-        public Product GetProductById(int id)
+        public static Product GetProductById(int id)
         {
             foreach (Product p in listProducts.ToList())
             {

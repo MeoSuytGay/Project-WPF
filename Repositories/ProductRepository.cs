@@ -10,7 +10,7 @@ namespace Repositories
    public  class ProductRepository : IProductRepository
     {
         public void  DeleteProduct(Product P)=> ProductDAO.DeleteProduct(P);
-            public void SaveProduct(Product P)=>ProductDAO.ListProducts(P);
+            public void SaveProduct(Product P)=>ProductDAO.ListProducts();
         public void UpdateProduct(Product P)=> ProductDAO.UpdateProduct(P);
         public List<Product> GetProducts() => ProductDAO.GetProducts();
         public Product GetProductById(int id)=>ProductDAO.GetProductById(id);
